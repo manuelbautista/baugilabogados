@@ -244,7 +244,7 @@
                                             <div class="default-overlay-outer">
                                                 <div class="inner">
                                                     <div class="content-layer">
-                                                        <a href="#snServicio" class="theme-btn btn-style-three">Solicitar</a>
+                                                        <a id="btn1" href="#snServicio" class="theme-btn btn-style-three">Solicitar</a>
                                                     </div>
                                                 </div>
                                             </div>                                          
@@ -264,7 +264,7 @@
                                             <div class="default-overlay-outer">
                                                 <div class="inner">
                                                     <div class="content-layer">
-                                                        <a href="#snServicio" class="theme-btn btn-style-three">Solicitar</a>
+                                                        <a id="btn2" href="#snServicio" class="theme-btn btn-style-three">Solicitar</a>
                                                     </div>
                                                 </div>
                                             </div>                                            
@@ -603,22 +603,22 @@
                             	<input type="text" name="phone" value="" placeholder="Telefono" required>
                             </div>
                             <div class="form-group col-md-6 col-sm-12 col-xs-12">
-                            	<select name="subject">
-                                	<option>Asesoría consular RD$ 990.00</option>
-                                    <option>Creación Perfil consular, cita VAC, cita entrevista consular  RD$ 1,290.00</option>
-                                    <option>Llenado de formulario + asesoría consular  RD$ 3,490.00</option>
-                                    <option>Paquete completo RD$ 4,990.00</option>
-                                    <option>Renovación Visa B1/B2  RD$ 3,990.00</option>
-                                    <option>Autorización viaje exterior menor de edad RD$ 6,500.00</option>
-                                    <option>Constitución Empresa SRL RD$ 15,000.00</option>
-                                    <option>Contratos desde RD$ 3,690.00</option>
-                                    <option>Acuerdo Prenupcial desde RD$ 45,000.00</option>
-                                    <option>Divorcio al Vapor desde US$ 990.00</option>
-                                    <option>Divorcio por incompatibilidad RD$ 24,990.00</option>
-                                    <option>Asesoría Crediticia RD$ 1,290.00</option>
-                                    <option>Saneamiento Buro crédito RD$ 7,990.00</option>
-                                    <option>Traspaso Vehículo desde RD$ 6,600.00</option>
-                                    <option>Acto Venta Vehículos desde RD$ 3,690.00</option>
+                            	<select id="ddFormCombo" name="subject">
+                                	<option value=1>Asesoría consular RD$ 990.00</option>
+                                    <option value=2>Creación Perfil consular, cita VAC, cita entrevista consular  RD$ 1,290.00</option>
+                                    <option value=3>Llenado de formulario + asesoría consular  RD$ 3,490.00</option>
+                                    <option value=4>Paquete completo RD$ 4,990.00</option>
+                                    <option value=5>Renovación Visa B1/B2  RD$ 3,990.00</option>
+                                    <option value=6>Autorización viaje exterior menor de edad RD$ 6,500.00</option>
+                                    <option value=7>Constitución Empresa SRL RD$ 15,000.00</option>
+                                    <option value=8>Contratos desde RD$ 3,690.00</option>
+                                    <option value=9>Acuerdo Prenupcial desde RD$ 45,000.00</option>
+                                    <option value=10>Divorcio al Vapor desde US$ 990.00</option>
+                                    <option value=11>Divorcio por incompatibilidad RD$ 24,990.00</option>
+                                    <option value=12>Asesoría Crediticia RD$ 1,290.00</option>
+                                    <option value=13>Saneamiento Buro crédito RD$ 7,990.00</option>
+                                    <option value=14>Traspaso Vehículo desde RD$ 6,600.00</option>
+                                    <option value=15>Acto Venta Vehículos desde RD$ 3,690.00</option>
 
                                 </select>
                             </div>
@@ -797,5 +797,16 @@
 <script src="js/nouislider.js"></script>
 <script src="js/wow.js"></script>
 <script src="js/script.js"></script>
+<script>
+
+$(document).ready(function() {
+    $( "#btn1" ).click(function() {
+        $("#ddFormCombo").val('1')
+    });
+    $( "#btn2" ).click(function() {
+        $("#ddFormCombo").val('2')
+    });
+});
+</script>
 </body>
 </html>
