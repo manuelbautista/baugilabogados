@@ -1,0 +1,317 @@
+﻿
+@{
+    ViewBag.Title = "About";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!--Page Title-->
+<section class="page-title" style="background-image:url(/images/1920x350/masley.jpg);">
+    <div class="auto-container">
+        <h1></h1>
+    </div>
+</section>
+
+<!--Page Info-->
+<section class="page-info">
+    <div class="auto-container clearfix">
+        <div class="pull-left"><h2>Nosotros</h2></div>
+        <div class="pull-right">
+            <ul class="bread-crumb clearfix">
+                <li><a href="@Url.Action("Index", "Home")">Inicio</a></li>
+                <li>Nosotros</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+
+<!--Welcome Section-->
+<section class="welcome-section">
+    <div class="auto-container">
+        <div class="row clearfix">
+
+            <!--Content Column-->
+            <div class="content-column column col-lg-6 col-md-6 col-sm-12">
+                <div class="inner-box">
+                    <div class="text-header">
+                        <h2 class="theme_color">Bienvenid@@ a Baugil Abogados</h2>
+                        <h2 class="text-uppercase">Somos una firma de abogados especialistas en Derecho Civil.</h2>
+                    </div>
+                    <div class="text-content">
+
+                        <div class="row clearfix">
+                            <div class="col-lg-8 col-md-12 col-xs-12">
+                                <div class="text">
+                                    <p>
+                                        Baugil Abogados es una organización que nace de la iniciativa de su socia fundadora Marilenny Gil quien tuvo como sueño
+                                        el ejercicio del derecho, pero por cuestiones ajenas la vida le dio la oportunidad de ejercer primero la tecnología como carrera profesional.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-12 col-xs-12">
+
+                                <!--Text Carousel
+                                <div class="text-carousel-outer">
+
+                                    <ul class="text-carousel single-item-carousel">
+                                        <li class="slide-item">
+                                            <h3>42,500</h3>
+                                            <p>Criminal Cases Won</p>
+                                        </li>
+                                        <li class="slide-item">
+                                            <h3>42,500</h3>
+                                            <p>Criminal Cases Won</p>
+                                        </li>
+                                    </ul>
+
+                                </div><! End Text Carousel-->
+                                <img src="/images/187x131/investigation.jpg" alt="">
+                            </div>
+
+                        </div>
+
+                        <div class="text">
+                            <p>
+                                Trabajando en tecnologia iniciamos el proyecto de Intermediacion Financiera llamado <a href="http://baugil.com.do/">Baugil Inversiones.</a>
+                                Resulta que las cosas fueron dándose de una forma tal que llego un momento en que por estar tan ligados al sector financiero <a href="http://baugil.com.do/"> (Baugil Inversiones)</a> nace la necesidad y oportunidad a la vez de fundar esta firma legal.
+                            </p>
+                            <p>
+                                En Baugil Abogados combinamos los servicios legales con la tecnología a fin de darle al cliente un servicio con valor agregado a través de una comunicación efectiva, transparencia en nuestro accionar, apego a la ética y excelencia todo lo que ofrecemos.
+                            </p>
+                        </div>
+
+                        <a href="@Url.Action("Index", "Home")" class="theme-btn btn-style-one">Envía tu Caso</a>
+
+                    </div>
+                </div>
+            </div><!--End Content Column-->
+            <!--Laws Column-->
+            <div class="laws-column column col-lg-6 col-md-6 col-sm-12">
+                <div class="inner-box">
+                    <!--Columns Outer-->
+                    <div class="row clearfix">
+                        <!--Image Box-->
+                        <div class="image-column col-md-6 col-sm-6 col-xs-12">
+                            <figure class="image-box wow fadeInDown" data-wow-delay="0ms" data-wow-duration="1500ms">
+                                <img src="/images/270x221/lawoffice.jpg" alt="">
+                                <a href="@Url.Action("DerechoCivil", "Home")" class="default-overlay-outer">
+                                    <div class="inner">
+                                        <div class="content-layer">
+                                            <div class="icon"><span class="flaticon-medical"></span></div>
+                                            <h3>Derecho Civil</h3>
+                                        </div>
+                                    </div>
+                                </a>
+                            </figure>
+                        </div>
+
+                        <!--Image Box-->
+                        <div class="image-column col-md-6 col-sm-6 col-xs-12">
+                            <figure class="image-box wow fadeInDown" data-wow-delay="0ms" data-wow-duration="1500ms">
+                                <img src="/images/270x221/familia.jpg" alt="">
+                                <a href="@Url.Action("DerechoFamilia", "Home")" class="default-overlay-outer">
+                                    <div class="inner">
+                                        <div class="content-layer">
+                                            <div class="icon"><span class="flaticon-people-1"></span></div>
+                                            <h3>Derecho de Familia</h3>
+                                        </div>
+                                    </div>
+                                </a>
+                            </figure>
+                        </div>
+
+                        <!--Image Box-->
+                        <div class="image-column col-md-6 col-sm-6 col-xs-12">
+                            <figure class="image-box wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+                                <img src="/images/270x221/esposas.jpg" alt="">
+                                <a href="@Url.Action("DerechoPenal", "Home")" class="default-overlay-outer">
+                                    <div class="inner">
+                                        <div class="content-layer">
+                                            <div class="icon"><span class="flaticon-people"></span></div>
+                                            <h3>Derecho Penal</h3>
+                                        </div>
+                                    </div>
+                                </a>
+                            </figure>
+                        </div>
+
+                        <!--Image Box-->
+                        <div class="image-column col-md-6 col-sm-6 col-xs-12">
+                            <figure class="image-box wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+                                <img src="/images/270x221/viaje.png" alt="">
+                                <a href="@Url.Action("DerechoMigratorio", "Home")" class="default-overlay-outer">
+                                    <div class="inner">
+                                        <div class="content-layer">
+                                            <div class="icon"><span class="flaticon-bag"></span></div>
+                                            <h3>Derecho Migratorio</h3>
+                                        </div>
+                                    </div>
+                                </a>
+                            </figure>
+                        </div>
+
+                    </div>
+                </div>
+            </div><!--End Laws Column-->
+
+        </div>
+
+        <hr>
+    </div>
+</section>
+
+
+<!--Default Section-->
+<section class="default-section">
+    <div class="auto-container">
+
+        <div class="row clearfix">
+
+            <!--Default Column-->
+            <div class="default-column col-lg-6 col-md-12 col-xs-12">
+                <!--Styled Heading-->
+                <div class="styled-heading">
+                    <h2>Equipo de Baugil Abogados</h2>
+                </div>
+                <!--Our Experience-->
+                <div class="our-experience">
+                    <div class="desc-text">
+                        <p>Los integrantes de la firma son Ingeniera en Sistemas y Abogada Marilenny Gil, Ingeniero en Sistemas Manuel Bautista y la Abogada Wilma Cabral.</p>
+                    </div>
+
+                    <!--Timeline Outer-->
+                    <div class="timeline-outer">
+                        <div class="left-line"></div>
+
+                        <!--Experience Block-->
+                        <article class="experience-block">
+                            <figure class="image-box"><img src="/images/110x110/mary.jpg" alt=""><div class="date">✔</div></figure>
+                            <div class="content">
+                                <h3>Ingeniera en Sistemas y Abogada Marilenny Gil</h3>
+                                <p>
+                                    Analista de Aplicaciones Financieras y Quality Assurance, con mas de 6 años de experiencia en el sector Bancario. Abogada en ejercicio especialista
+                                    en derecho Civil en todas sus vertientes (familia, laboral, inmobiliario, migratorio y consular).
+                                </p>
+                            </div>
+                        </article>
+
+                        <!--Experience Block-->
+                        <article class="experience-block">
+                            <figure class="image-box"><img src="/images/110x110/manuel.jpg" alt=""><div class="date">✔</div></figure>
+                            <div class="content">
+                                <h3>Ingeniero en Sistemas Manuel Bautista</h3>
+                                <p>
+                                    Desarrollador Senior Full Stack, con mas de 8 años de experiencia
+                                    trabajando con tecnologias como ASP.NET, ASP.NET MVC, C#, Winform, Telerik, Entity Framework, LinQ, MSSql, Javascript, JQuery, HTML, CSS and more lately AngularJS 1 & 2, KnockoutJS and NodeJS.
+                                </p>
+                            </div>
+                        </article>
+
+                        <!--Experience Block-->
+                        <article class="experience-block">
+                            <figure class="image-box"><img src="/images/110x110/wilma2.jpg" alt=""><div class="date">✔</div></figure>
+                            <div class="content">
+                                <h3>Abogada Wilma Cabral</h3>
+                                <p> Abogada especialista en Derecho Civil Corporativo, con vasta experiencia en recuperacion de valores y cobros compulsivos.</p>
+                            </div>
+                        </article>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!--Default Column-->
+            <div class="default-column col-lg-6 col-md-12 col-xs-12">
+                <!--Styled Heading-->
+                <div class="styled-heading">
+                    <h2>¿Que nos diferencia?</h2>
+                </div>
+
+                <!--Accordion Box-->
+                <div class="accordion-box">
+                    <!-- Accordion -->
+                    <div class="accordion accordion-block">
+                        <div class="accord-btn active"><h4>Sentido de la Responsabilidad</h4></div>
+                        <div class="accord-content collapsed">
+                            <div class="clearfix">
+                                <figure class="image-box">
+                                    <img src="images/110x110/1responsabilidad.jpg" alt="">
+                                </figure>
+                                <P>
+                                    Cada caso es único y particular, por eso trabajamos con fervor, pasión y el mas alto sentido de responsabilidad y compromiso. Siempre damos la milla extra a fin de resolver los conflictos de la forma más económica posible.
+                                </P>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Accordion -->
+                    <div class="accordion accordion-block">
+                        <div class="accord-btn"><h4>Relación basada en la confianza</h4></div>
+                        <div class="accord-content">
+                            <div class="clearfix">
+                                <figure class="image-box">
+                                    <img src="images/110x110/1confianza.jpg" alt="">
+                                </figure>
+
+                                <p>La lealtad es la mejor base para garantizar una relación sana en la que pueda aumentar la confianza con el paso del tiempo. Nuestro equipo trabaja basándonos en el respeto que nos merecen nuestros clientes.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Accordion -->
+                    <div class="accordion accordion-block">
+                        <div class="accord-btn"><h4>Comunicación efectiva</h4></div>
+                        <div class="accord-content">
+                            <div class="clearfix">
+                                <figure class="image-box">
+                                    <img src="images/110x110/1comunicacion.jpg" alt="">
+
+                                </figure>
+                                <p>
+                                    Mantenemos una comunicación de doble vía con nuestros clientes, haciéndole saber en todo momento el estado de su caso.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Accordion -->
+                    <div class="accordion accordion-block">
+                        <div class="accord-btn"><h4>Transparencia y Eficiencia</h4></div>
+                        <div class="accord-content">
+                            <div class="clearfix">
+                                <figure class="image-box">
+                                    <img src="images/110x110/1transparencia.jpg" alt="">
+
+                                </figure>
+                                <p>
+                                    Cada proceso es llevado con el mas alto control de los gastos incurridos, de modo que el cliente puede verificar con certeza la correspondencia entre lo servido y lo facturado.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Accordion -->
+                    <div class="accordion accordion-block">
+                        <div class="accord-btn"><h4>Sentido de la Ética</h4></div>
+                        <div class="accord-content">
+                            <div class="clearfix">
+                                <figure class="image-box">
+                                    <img src="images/110x110/1etica.jpg" alt="">
+
+                                </figure>
+                                <p>
+                                    En un país en donde el ejercicio del derecho es muchas veces cuestionado, es esencial contratar un equipo que se caracterice por la seriedad y ética en sus acciones.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+

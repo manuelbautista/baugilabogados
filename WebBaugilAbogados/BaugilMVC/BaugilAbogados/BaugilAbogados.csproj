@@ -1,0 +1,852 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E2701D21-74D4-4D67-B344-EF14D555E18E}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BaugilAbogados</RootNamespace>
+    <AssemblyName>BaugilAbogados</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ApplicationInsights">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.2.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.0.6\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.2.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.2.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.2.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.2.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.2.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Areas\HelpPage\ApiDescriptionExtensions.cs" />
+    <Compile Include="Areas\HelpPage\App_Start\HelpPageConfig.cs" />
+    <Compile Include="Areas\HelpPage\Controllers\HelpController.cs" />
+    <Compile Include="Areas\HelpPage\HelpPageAreaRegistration.cs" />
+    <Compile Include="Areas\HelpPage\HelpPageConfigurationExtensions.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\CollectionModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ComplexTypeModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\DictionaryModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\EnumTypeModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\EnumValueDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\IModelDocumentationProvider.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\KeyValuePairModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ModelDescriptionGenerator.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ModelNameAttribute.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ModelNameHelper.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ParameterAnnotation.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ParameterDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\SimpleTypeModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\Models\HelpPageApiModel.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\HelpPageSampleGenerator.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\HelpPageSampleKey.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\ImageSample.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\InvalidSample.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\ObjectGenerator.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
+    <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ValuesController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\HelpPage\HelpPage.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="css\animate.css" />
+    <Content Include="css\assets\aleft.png" />
+    <Content Include="css\assets\aright.png" />
+    <Content Include="css\assets\arrowleft.png" />
+    <Content Include="css\assets\arrowright.png" />
+    <Content Include="css\assets\arrow_large_left.png" />
+    <Content Include="css\assets\arrow_large_right.png" />
+    <Content Include="css\assets\arrow_left.png" />
+    <Content Include="css\assets\arrow_left2.png" />
+    <Content Include="css\assets\arrow_right.png" />
+    <Content Include="css\assets\arrow_right2.png" />
+    <Content Include="css\assets\black50.png" />
+    <Content Include="css\assets\boxed_bgtile.png" />
+    <Content Include="css\assets\bullet.png" />
+    <Content Include="css\assets\bullets.png" />
+    <Content Include="css\assets\bullets2.png" />
+    <Content Include="css\assets\bullet_boxed.png" />
+    <Content Include="css\assets\coloredbg.png" />
+    <Content Include="css\assets\grain.png" />
+    <Content Include="css\assets\gridtile.png" />
+    <Content Include="css\assets\gridtile_3x3.png" />
+    <Content Include="css\assets\gridtile_3x3_white.png" />
+    <Content Include="css\assets\gridtile_white.png" />
+    <Content Include="css\assets\large_left.png" />
+    <Content Include="css\assets\large_right.png" />
+    <Content Include="css\assets\loader.gif" />
+    <Content Include="css\assets\loader2.gif" />
+    <Content Include="css\assets\navigdots.png" />
+    <Content Include="css\assets\navigdots_bgtile.png" />
+    <Content Include="css\assets\next-slide.png" />
+    <Content Include="css\assets\prev-slide.png" />
+    <Content Include="css\assets\shadow1.png" />
+    <Content Include="css\assets\shadow2.png" />
+    <Content Include="css\assets\shadow3.png" />
+    <Content Include="css\assets\small_left.png" />
+    <Content Include="css\assets\small_left_boxed.png" />
+    <Content Include="css\assets\small_right.png" />
+    <Content Include="css\assets\small_right_boxed.png" />
+    <Content Include="css\assets\timer.png" />
+    <Content Include="css\assets\timerdot.png" />
+    <Content Include="css\assets\transparent.jpg" />
+    <Content Include="css\assets\white50.png" />
+    <Content Include="css\bootstrap-theme.css" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\flaticon.css" />
+    <Content Include="css\font-awesome.css" />
+    <Content Include="css\hover.css" />
+    <Content Include="css\jquery.bootstrap-touchspin.css" />
+    <Content Include="css\jquery.fancybox.css" />
+    <Content Include="css\jquery.mCustomScrollbar.min.css" />
+    <Content Include="css\nouislider.css" />
+    <Content Include="css\nouislider.pips.css" />
+    <Content Include="css\owl.css" />
+    <Content Include="css\responsive.css" />
+    <Content Include="css\revolution-slider.css" />
+    <Content Include="css\style.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="images\1000x500\law.jpg" />
+    <Content Include="images\1020x400\firmando.jpg" />
+    <Content Include="images\1024x682\lawyermeetingsClient.jpg" />
+    <Content Include="images\110x110\1comunicacion.jpg" />
+    <Content Include="images\110x110\1confianza.jpg" />
+    <Content Include="images\110x110\1etica.jpg" />
+    <Content Include="images\110x110\1responsabilidad.jpg" />
+    <Content Include="images\110x110\1transparencia.jpg" />
+    <Content Include="images\110x110\area-inmobiliario1.jpg" />
+    <Content Include="images\110x110\balanza5.jpg" />
+    <Content Include="images\110x110\banderas.jpg" />
+    <Content Include="images\110x110\banderas2.jpg" />
+    <Content Include="images\110x110\banner_ddi.jpg" />
+    <Content Include="images\110x110\bizcoho.jpg" />
+    <Content Include="images\110x110\boletos.jpg" />
+    <Content Include="images\110x110\books.jpg" />
+    <Content Include="images\110x110\Canada.jpg" />
+    <Content Include="images\110x110\canada1.png" />
+    <Content Include="images\110x110\casa.jpg" />
+    <Content Include="images\110x110\casado.jpg" />
+    <Content Include="images\110x110\casita.jpg" />
+    <Content Include="images\110x110\civil.jpg" />
+    <Content Include="images\110x110\civil2.jpg" />
+    <Content Include="images\110x110\civilconstitucionEmpresa.jpg" />
+    <Content Include="images\110x110\civilcrearempresa.jpg" />
+    <Content Include="images\110x110\civilderechoprocesal.jpg" />
+    <Content Include="images\110x110\civilderecho_civil.jpg" />
+    <Content Include="images\110x110\civilempresa.jpg" />
+    <Content Include="images\110x110\civilsrl.jpg" />
+    <Content Include="images\110x110\contract0.jpg" />
+    <Content Include="images\110x110\contrato.jpg" />
+    <Content Include="images\110x110\corte.jpg" />
+    <Content Include="images\110x110\delitoDinero.jpg" />
+    <Content Include="images\110x110\derecho-migratorio 2.jpg" />
+    <Content Include="images\110x110\derecho-migratorio.jpg" />
+    <Content Include="images\110x110\deuda.jpg" />
+    <Content Include="images\110x110\divo.jpg" />
+    <Content Include="images\110x110\divorcio.jpg" />
+    <Content Include="images\110x110\divorcio1.jpg" />
+    <Content Include="images\110x110\dollar.png" />
+    <Content Include="images\110x110\embarazo.png" />
+    <Content Include="images\110x110\espacio-schengen.jpg" />
+    <Content Include="images\110x110\familia.jpg" />
+    <Content Include="images\110x110\familia2.jpg" />
+    <Content Include="images\110x110\familiader.jpg" />
+    <Content Include="images\110x110\family.jpg" />
+    <Content Include="images\110x110\gavel-.jpg" />
+    <Content Include="images\110x110\greencard.png" />
+    <Content Include="images\110x110\guardaMenor.jpg" />
+    <Content Include="images\110x110\home2.jpg" />
+    <Content Include="images\110x110\justice.jpg" />
+    <Content Include="images\110x110\key.jpg" />
+    <Content Include="images\110x110\laboral.jpg" />
+    <Content Include="images\110x110\laborales.jpg" />
+    <Content Include="images\110x110\law.jpg" />
+    <Content Include="images\110x110\law1.jpg" />
+    <Content Include="images\110x110\lawer.jpg" />
+    <Content Include="images\110x110\legal.jpg" />
+    <Content Include="images\110x110\legal1.jpg" />
+    <Content Include="images\110x110\manos.jpg" />
+    <Content Include="images\110x110\manos2.png" />
+    <Content Include="images\110x110\manuel.JPG" />
+    <Content Include="images\110x110\mary.jpg" />
+    <Content Include="images\110x110\mary2.jpg" />
+    <Content Include="images\110x110\mazo.png" />
+    <Content Include="images\110x110\mazo2.jpg" />
+    <Content Include="images\110x110\mazo3.jpg" />
+    <Content Include="images\110x110\penalderechopenal.jpg" />
+    <Content Include="images\110x110\penalderechopenal.png" />
+    <Content Include="images\110x110\PenalMDP.jpg" />
+    <Content Include="images\110x110\portfolio.jpg" />
+    <Content Include="images\110x110\prision.jpg" />
+    <Content Include="images\110x110\publicidad.jpg" />
+    <Content Include="images\110x110\realestate.jpg" />
+    <Content Include="images\110x110\recortarFamilia.jpg" />
+    <Content Include="images\110x110\schengen-visa1.jpg" />
+    <Content Include="images\110x110\transpadodevehiculo.jpg" />
+    <Content Include="images\110x110\ukvisa.jpg" />
+    <Content Include="images\110x110\US-Visa-Vietnam.jpg" />
+    <Content Include="images\110x110\vehiculo.jpg" />
+    <Content Include="images\110x110\ViajeMenor.JPG" />
+    <Content Include="images\110x110\visa.jpg" />
+    <Content Include="images\110x110\visaCanada.jpg" />
+    <Content Include="images\110x110\wilma.jpg" />
+    <Content Include="images\110x110\wilma2.jpg" />
+    <Content Include="images\1140x580\maletin.jpg" />
+    <Content Include="images\1200x350\abogadocruzado.jpg" />
+    <Content Include="images\1200x796\dando mano.jpg" />
+    <Content Include="images\1600x1067\librosbalanza.jpg" />
+    <Content Include="images\1600x1600\martillo.jpg" />
+    <Content Include="images\1600x700\casa martillo.jpg" />
+    <Content Include="images\1600x700\casamartillo.jpg" />
+    <Content Include="images\1600x700\junta.jpg" />
+    <Content Include="images\1732x730\martillo.jpg" />
+    <Content Include="images\187x131\investigation.jpg" />
+    <Content Include="images\187x131\procesoLegal.jpg" />
+    <Content Include="images\187x131\quote.jpg" />
+    <Content Include="images\1900x1179\balanzalibros.jpg" />
+    <Content Include="images\1920x350\avion.jpg" />
+    <Content Include="images\1920x350\civil.jpg" />
+    <Content Include="images\1920x350\contacto.jpg" />
+    <Content Include="images\1920x350\criminal.jpg" />
+    <Content Include="images\1920x350\criminalBalanza.jpg" />
+    <Content Include="images\1920x350\derechoFamilia.jpg" />
+    <Content Include="images\1920x350\empleados.jpg" />
+    <Content Include="images\1920x350\estudiocaso.jpg" />
+    <Content Include="images\1920x350\faq.jpg" />
+    <Content Include="images\1920x350\hombrelibro.jpg" />
+    <Content Include="images\1920x350\inmob.jpg" />
+    <Content Include="images\1920x350\INMOB2.jpg" />
+    <Content Include="images\1920x350\inmobiliario.jpg" />
+    <Content Include="images\1920x350\justice-scales-hero-image.jpg" />
+    <Content Include="images\1920x350\legal.jpg" />
+    <Content Include="images\1920x350\library.jpg" />
+    <Content Include="images\1920x350\machu.jpg" />
+    <Content Include="images\1920x350\manos.jpg" />
+    <Content Include="images\1920x350\masley.jpg" />
+    <Content Include="images\1920x350\mazo.jpg" />
+    <Content Include="images\1920x350\mazo2.jpg" />
+    <Content Include="images\1920x350\mazolibros.jpg" />
+    <Content Include="images\1920x350\migracion.jpg" />
+    <Content Include="images\1920x350\migratorio.jpg" />
+    <Content Include="images\1920x350\penal.jpg" />
+    <Content Include="images\1920x350\turcos.jpg" />
+    <Content Include="images\1920x350\vacancies.jpg" />
+    <Content Include="images\1920x350\viaje.jpg" />
+    <Content Include="images\1920x533\trato.jpg" />
+    <Content Include="images\1920x604\balanzamartillo.jpg" />
+    <Content Include="images\1920x604\beach.jpg" />
+    <Content Include="images\1920x604\books.jpg" />
+    <Content Include="images\1920x604\derecholaboral.png" />
+    <Content Include="images\1920x604\martillo.jpg" />
+    <Content Include="images\1920x604\vuelo.jpg" />
+    <Content Include="images\1920x750\avion1920x750.jpg" />
+    <Content Include="images\1920x750\Avion3-1920x750.jpg" />
+    <Content Include="images\1920x750\avionfrente1920x750.jpg" />
+    <Content Include="images\1920x750\Balanzaymartillo.jpg" />
+    <Content Include="images\1920x750\consejos1920x750.jpg" />
+    <Content Include="images\1920x750\documentos1920x750.jpg" />
+    <Content Include="images\1920x750\equipo.jpg" />
+    <Content Include="images\1920x750\firmando.jpg" />
+    <Content Include="images\1920x750\firmandoLey1920x750.jpg" />
+    <Content Include="images\1920x750\FlagEEUU.jpg" />
+    <Content Include="images\1920x750\FlagEEUU2.jpg" />
+    <Content Include="images\1920x750\FlagEEUU3.jpg" />
+    <Content Include="images\1920x750\header-atlanta.1920x750jpg.jpg" />
+    <Content Include="images\1920x750\home-banner-folder1920x750.jpg" />
+    <Content Include="images\1920x750\inmobiliario.jpg" />
+    <Content Include="images\1920x750\junta1920x750.jpg" />
+    <Content Include="images\1920x750\martillo.jpg" />
+    <Content Include="images\1920x750\mundoConectado.jpg" />
+    <Content Include="images\1920x750\oficina.jpg" />
+    <Content Include="images\1920x750\presentes-en-todo-el-mundo1920x750.jpg" />
+    <Content Include="images\1920x750\services1920x750.jpg" />
+    <Content Include="images\1920x750\slide_law.jpg" />
+    <Content Include="images\1920x750\solomartillo1920x750.jpg" />
+    <Content Include="images\1920x750\trato1920x750.jpg" />
+    <Content Include="images\1920x750\tratodinero1920x750.png" />
+    <Content Include="images\1920x750\ventaPropiedades.jpg" />
+    <Content Include="images\2000x1000\Abogado-de-traje.jpg" />
+    <Content Include="images\2000x1000\martillo.jpg" />
+    <Content Include="images\2000x1000\mujerAbogadaTrato.jpg" />
+    <Content Include="images\2000x1000\o-BUSINESS-SHAKING-HANDS-facebook.jpg" />
+    <Content Include="images\2000x1000\tratoAbogadosMujer.jpg" />
+    <Content Include="images\2000x1000\tratoAbogadosMujer1.jpg" />
+    <Content Include="images\221x221\prision.png" />
+    <Content Include="images\2323x1017\balanza.jpg" />
+    <Content Include="images\270x170\balanza.jpg" />
+    <Content Include="images\270x170\civil.jpg" />
+    <Content Include="images\270x170\contrato.jpg" />
+    <Content Include="images\270x170\contratoPrenup.jpg" />
+    <Content Include="images\270x170\divorcio.jpg" />
+    <Content Include="images\270x170\estrado.jpg" />
+    <Content Include="images\270x170\firmando.jpg" />
+    <Content Include="images\270x170\manos.jpg" />
+    <Content Include="images\270x170\manoss.jpg" />
+    <Content Include="images\270x170\migratorio.jpg" />
+    <Content Include="images\270x170\realestate.jpg" />
+    <Content Include="images\270x221\balanza.jpg" />
+    <Content Include="images\270x221\Civil.jpg" />
+    <Content Include="images\270x221\esposas.jpg" />
+    <Content Include="images\270x221\Familia.jpg" />
+    <Content Include="images\270x221\herencia.jpg" />
+    <Content Include="images\270x221\lawoffice.jpg" />
+    <Content Include="images\270x221\ley.jpg" />
+    <Content Include="images\270x221\manos.jpg" />
+    <Content Include="images\270x221\penal.jpg" />
+    <Content Include="images\270x221\realEstate.jpg" />
+    <Content Include="images\270x221\viaje.png" />
+    <Content Include="images\270x257\contrato.jpg" />
+    <Content Include="images\270x257\pcmazo.jpg" />
+    <Content Include="images\270x257\reunion.jpg" />
+    <Content Include="images\270x270\actoventa.jpg" />
+    <Content Include="images\270x270\acuerdopre.jpg" />
+    <Content Include="images\270x270\avion1920x750.jpg" />
+    <Content Include="images\270x270\Avion3-1920x750.jpg" />
+    <Content Include="images\270x270\avionfrente1920x750.jpg" />
+    <Content Include="images\270x270\balanza270.jpg" />
+    <Content Include="images\270x270\contrato.jpg" />
+    <Content Include="images\270x270\credito.jpg" />
+    <Content Include="images\270x270\divorcio.jpg" />
+    <Content Include="images\270x270\divorcio2.jpg" />
+    <Content Include="images\270x270\divorcio3.jpg" />
+    <Content Include="images\270x270\ds160.jpg" />
+    <Content Include="images\270x270\empresa.jpg" />
+    <Content Include="images\270x270\paq.jpg" />
+    <Content Include="images\270x270\portafolio270.jpg" />
+    <Content Include="images\270x270\recupera.jpeg" />
+    <Content Include="images\270x270\renova.jpg" />
+    <Content Include="images\270x270\saneamiento.jpg" />
+    <Content Include="images\270x270\traspaso.jpg" />
+    <Content Include="images\270x270\vehiculo.jpg" />
+    <Content Include="images\270x270\viajemenor.jpg" />
+    <Content Include="images\270x270\visa.jpg" />
+    <Content Include="images\270x270\visa2.jpeg" />
+    <Content Include="images\270x270\visaAprobada.jpg" />
+    <Content Include="images\2917x1189\balanza.jpg" />
+    <Content Include="images\300x200\audiencia.jpg" />
+    <Content Include="images\300x200\Despachos.jpg" />
+    <Content Include="images\370x250\boston.jpg" />
+    <Content Include="images\370x250\centralpark.jpg" />
+    <Content Include="images\370x250\chanclas.jpg" />
+    <Content Include="images\370x250\cielo_inicial.jpg" />
+    <Content Include="images\370x250\coco.jpg" />
+    <Content Include="images\370x250\miami.jpg" />
+    <Content Include="images\370x250\nieve.jpg" />
+    <Content Include="images\370x250\nieve2.jpg" />
+    <Content Include="images\370x250\NYC-Skyline.jpg" />
+    <Content Include="images\370x250\nyc.jpg" />
+    <Content Include="images\370x250\timesSquare.jpg" />
+    <Content Include="images\370x250\vuelos-internas.png" />
+    <Content Include="images\391x261\meetingsclients.jpg" />
+    <Content Include="images\430x253\lawyer-clients.jpg" />
+    <Content Include="images\500x408\151811056transpadodevehiculo.jpg" />
+    <Content Include="images\500x408\area-inmobiliario.jpg" />
+    <Content Include="images\500x408\banderas.jpg" />
+    <Content Include="images\500x408\banderas2.jpg" />
+    <Content Include="images\500x408\banner_ddi.jpg" />
+    <Content Include="images\500x408\boletos.jpg" />
+    <Content Include="images\500x408\canada.png" />
+    <Content Include="images\500x408\civil.jpg" />
+    <Content Include="images\500x408\civil2.jpg" />
+    <Content Include="images\500x408\civilconstitucionEmpresa.jpg" />
+    <Content Include="images\500x408\civilcrearempresa.jpg" />
+    <Content Include="images\500x408\civilderechoprocesal.jpg" />
+    <Content Include="images\500x408\civilderecho_civil.jpg" />
+    <Content Include="images\500x408\civilempresa.jpg" />
+    <Content Include="images\500x408\civilsrl.jpg" />
+    <Content Include="images\500x408\delitoDinero.jpg" />
+    <Content Include="images\500x408\derecho-migratorio 2.jpg" />
+    <Content Include="images\500x408\derecho-migratorio.jpg" />
+    <Content Include="images\500x408\deuda.jpg" />
+    <Content Include="images\500x408\espacio-schengen.jpg" />
+    <Content Include="images\500x408\familia.jpg" />
+    <Content Include="images\500x408\familia2.jpg" />
+    <Content Include="images\500x408\familiader.jpg" />
+    <Content Include="images\500x408\family.jpg" />
+    <Content Include="images\500x408\guardaMenor.jpg" />
+    <Content Include="images\500x408\laboral.jpg" />
+    <Content Include="images\500x408\laborales.jpg" />
+    <Content Include="images\500x408\penalderechopenal.jpg" />
+    <Content Include="images\500x408\penalderechopenal.png" />
+    <Content Include="images\500x408\PenalMDP.jpg" />
+    <Content Include="images\500x408\publicidad.jpg" />
+    <Content Include="images\500x408\realestate.jpg" />
+    <Content Include="images\500x408\schengen-visa1.jpg" />
+    <Content Include="images\500x408\US-Visa-Vietnam.jpg" />
+    <Content Include="images\500x408\vehiculo.jpg" />
+    <Content Include="images\500x408\ViajeMenor.JPG" />
+    <Content Include="images\500x408\visaCanada.jpg" />
+    <Content Include="images\500x500\balanza martillo - Copy.jpg" />
+    <Content Include="images\500x500\balanza martillo.jpg" />
+    <Content Include="images\500x500\balanza martillo2.jpg" />
+    <Content Include="images\500x500\portafolio.jpg" />
+    <Content Include="images\550x367\balanza-martillo.jpg" />
+    <Content Include="images\600x434\abogado.jpg" />
+    <Content Include="images\600x435\librosMartillo.jpg" />
+    <Content Include="images\628x314\mujerAbogadaEspalda.jpg" />
+    <Content Include="images\640x366\meetings.jpg" />
+    <Content Include="images\650x372\casamartillo.jpg" />
+    <Content Include="images\660x330\lupa.jpg" />
+    <Content Include="images\70x70\chica.jpg" />
+    <Content Include="images\70x70\feliz.jpg" />
+    <Content Include="images\70x70\felizhombre.png" />
+    <Content Include="images\745x420\maletin.jpg" />
+    <Content Include="images\750x498\corte.jpg" />
+    <Content Include="images\768x577\judge.jpg" />
+    <Content Include="images\859x559\business-meeting.jpg" />
+    <Content Include="images\background\bg-testimonials.jpg" />
+    <Content Include="images\background\consult-form-bg.jpg" />
+    <Content Include="images\background\footer-bg.jpg" />
+    <Content Include="images\background\graph-image.png" />
+    <Content Include="images\background\pagetitle-bg.jpg" />
+    <Content Include="images\Blogs\aceptar.jpg" />
+    <Content Include="images\Blogs\casos.jpg" />
+    <Content Include="images\Blogs\Casosenlinea.jpg" />
+    <Content Include="images\Blogs\consolidaDeudas.jpg" />
+    <Content Include="images\Blogs\deuda.jpg" />
+    <Content Include="images\Blogs\deudaS.jpg" />
+    <Content Include="images\Blogs\infoSeguridad.jpg" />
+    <Content Include="images\Blogs\inicio.jpg" />
+    <Content Include="images\Blogs\inscripcion.jpg" />
+    <Content Include="images\Blogs\llenarperfil.jpg" />
+    <Content Include="images\Blogs\peticionario.jpg" />
+    <Content Include="images\Blogs\salirdeuda.jpg" />
+    <Content Include="images\Blogs\viajarfamilia.jpg" />
+    <Content Include="images\fancybox\blank.gif" />
+    <Content Include="images\fancybox\fancybox_loading%402x.gif" />
+    <Content Include="images\fancybox\fancybox_loading.gif" />
+    <Content Include="images\fancybox\fancybox_overlay.png" />
+    <Content Include="images\fancybox\fancybox_sprite%402x.png" />
+    <Content Include="images\fancybox\fancybox_sprite.png" />
+    <Content Include="images\favicon.ico" />
+    <Content Include="images\gallery\image-1.jpg" />
+    <Content Include="images\gallery\image-10.jpg" />
+    <Content Include="images\gallery\image-2.jpg" />
+    <Content Include="images\gallery\image-3.jpg" />
+    <Content Include="images\gallery\image-4.jpg" />
+    <Content Include="images\gallery\image-5.jpg" />
+    <Content Include="images\gallery\image-6.jpg" />
+    <Content Include="images\gallery\image-7.jpg" />
+    <Content Include="images\gallery\image-8.jpg" />
+    <Content Include="images\gallery\image-9.jpg" />
+    <Content Include="images\icons\credit-cars.jpg" />
+    <Content Include="images\icons\curve.png" />
+    <Content Include="images\icons\footer-heading-style.png" />
+    <Content Include="images\icons\icon-dropdown.png" />
+    <Content Include="images\icons\icon-flag.png" />
+    <Content Include="images\icons\icon-play.png" />
+    <Content Include="images\icons\icon-select.png" />
+    <Content Include="images\icons\icon-toggle.png" />
+    <Content Include="images\icons\map-marker.png" />
+    <Content Include="images\icons\paypal-icon.png" />
+    <Content Include="images\icons\preloader.GIF" />
+    <Content Include="images\icons\submenu-icon.png" />
+    <Content Include="images\icons\title-line-image-2.png" />
+    <Content Include="images\icons\title-line-image.png" />
+    <Content Include="images\imagenes para cambiar\1.jpg" />
+    <Content Include="images\imagenes para cambiar\11.jpg" />
+    <Content Include="images\imagenes para cambiar\1350478651.jpg" />
+    <Content Include="images\imagenes para cambiar\148773795.jpg" />
+    <Content Include="images\imagenes para cambiar\2-8.jpg" />
+    <Content Include="images\imagenes para cambiar\accion-pauliana-en-el-derecho-civil-abogado-min.jpg" />
+    <Content Include="images\imagenes para cambiar\business-woman-signing-contract-pop_9937.jpg" />
+    <Content Include="images\imagenes para cambiar\corporate-law4.jpg" />
+    <Content Include="images\imagenes para cambiar\gavel.png" />
+    <Content Include="images\imagenes para cambiar\h-main-img-gallery-1.jpg" />
+    <Content Include="images\imagenes para cambiar\hills-district-business-lawyer2.jpg" />
+    <Content Include="images\imagenes para cambiar\law-books.jpg" />
+    <Content Include="images\imagenes para cambiar\lower-manhattan.png" />
+    <Content Include="images\imagenes para cambiar\manhattan.gif" />
+    <Content Include="images\imagenes para cambiar\portafolio.jpg" />
+    <Content Include="images\imagenes para cambiar\twin-cities-corporate-law-firm.jpg" />
+    <Content Include="images\imagenes para cambiar\xcharacter-reference-letter-for-criminal-court-001.jpg.pagespeed.ic.P7HT8NS13g.jpg" />
+    <Content Include="images\LogoBaugilAbogados.PNG" />
+    <Content Include="images\LogoBaugilAbogados2.PNG" />
+    <Content Include="images\logoGrande.PNG" />
+    <Content Include="images\logoGrande2.PNG" />
+    <Content Include="images\main-slider\1.jpg" />
+    <Content Include="images\main-slider\2.jpg" />
+    <Content Include="images\main-slider\3.jpg" />
+    <Content Include="images\main-slider\man-image.png" />
+    <Content Include="images\parallax\image-1.jpg" />
+    <Content Include="images\Publicidad FB\Migratorio\no tienes visa.JPG" />
+    <Content Include="images\resource\author-thumb-1.jpg" />
+    <Content Include="images\resource\author-thumb-2.jpg" />
+    <Content Include="images\resource\author-thumb-3.jpg" />
+    <Content Include="images\resource\author-thumb-4.jpg" />
+    <Content Include="images\resource\award-image-1.png" />
+    <Content Include="images\resource\award-image-2.png" />
+    <Content Include="images\resource\award-image-3.png" />
+    <Content Include="images\resource\award-image-4.png" />
+    <Content Include="images\resource\blog-image-1.jpg" />
+    <Content Include="images\resource\blog-image-10.jpg" />
+    <Content Include="images\resource\blog-image-11.jpg" />
+    <Content Include="images\resource\blog-image-12.jpg" />
+    <Content Include="images\resource\blog-image-13.jpg" />
+    <Content Include="images\resource\blog-image-14.jpg" />
+    <Content Include="images\resource\blog-image-15.jpg" />
+    <Content Include="images\resource\blog-image-16.jpg" />
+    <Content Include="images\resource\blog-image-17.jpg" />
+    <Content Include="images\resource\blog-image-18.jpg" />
+    <Content Include="images\resource\blog-image-19.jpg" />
+    <Content Include="images\resource\blog-image-2.jpg" />
+    <Content Include="images\resource\blog-image-20.jpg" />
+    <Content Include="images\resource\blog-image-21.jpg" />
+    <Content Include="images\resource\blog-image-22.jpg" />
+    <Content Include="images\resource\blog-image-3.jpg" />
+    <Content Include="images\resource\blog-image-4.jpg" />
+    <Content Include="images\resource\blog-image-5.jpg" />
+    <Content Include="images\resource\blog-image-6.jpg" />
+    <Content Include="images\resource\blog-image-7.jpg" />
+    <Content Include="images\resource\blog-image-8.jpg" />
+    <Content Include="images\resource\blog-image-9.jpg" />
+    <Content Include="images\resource\central-logo.png" />
+    <Content Include="images\resource\default-image-1.jpg" />
+    <Content Include="images\resource\default-image-10.jpg" />
+    <Content Include="images\resource\default-image-11.jpg" />
+    <Content Include="images\resource\default-image-12.jpg" />
+    <Content Include="images\resource\default-image-13.jpg" />
+    <Content Include="images\resource\default-image-14.jpg" />
+    <Content Include="images\resource\default-image-15.jpg" />
+    <Content Include="images\resource\default-image-16.jpg" />
+    <Content Include="images\resource\default-image-17.jpg" />
+    <Content Include="images\resource\default-image-18.jpg" />
+    <Content Include="images\resource\default-image-19.jpg" />
+    <Content Include="images\resource\default-image-2.jpg" />
+    <Content Include="images\resource\default-image-3.jpg" />
+    <Content Include="images\resource\default-image-4.jpg" />
+    <Content Include="images\resource\default-image-5.jpg" />
+    <Content Include="images\resource\default-image-6.jpg" />
+    <Content Include="images\resource\default-image-7.jpg" />
+    <Content Include="images\resource\default-image-8.jpg" />
+    <Content Include="images\resource\default-image-9.jpg" />
+    <Content Include="images\resource\error-group-image.png" />
+    <Content Include="images\resource\gallery-thumb-1.jpg" />
+    <Content Include="images\resource\gallery-thumb-2.jpg" />
+    <Content Include="images\resource\gallery-thumb-3.jpg" />
+    <Content Include="images\resource\gallery-thumb-4.jpg" />
+    <Content Include="images\resource\gallery-thumb-5.jpg" />
+    <Content Include="images\resource\gallery-thumb-6.jpg" />
+    <Content Include="images\resource\gallery-thumb-7.jpg" />
+    <Content Include="images\resource\gallery-thumb-8.jpg" />
+    <Content Include="images\resource\gallery-thumb-9.jpg" />
+    <Content Include="images\resource\man-image.png" />
+    <Content Include="images\resource\signature-image-2.png" />
+    <Content Include="images\resource\signature-image.png" />
+    <Content Include="images\resource\small-author-thumb-1.png" />
+    <Content Include="images\resource\small-author-thumb-2.png" />
+    <Content Include="images\resource\small-author-thumb-3.png" />
+    <Content Include="images\resource\team-image-1.jpg" />
+    <Content Include="images\resource\team-image-2.jpg" />
+    <Content Include="images\resource\team-image-3.jpg" />
+    <Content Include="images\resource\team-image-4.jpg" />
+    <Content Include="images\resource\team-image-5.jpg" />
+    <Content Include="images\resource\team-image-6.jpg" />
+    <Content Include="images\resource\team-image-7.jpg" />
+    <Content Include="images\resource\team-image-8.jpg" />
+    <Content Include="images\resource\team-image-9.jpg" />
+    <Content Include="images\resource\testi-image-1.jpg" />
+    <Content Include="images\resource\testi-thumb-1.jpg" />
+    <Content Include="images\resource\testi-thumb-1.png" />
+    <Content Include="images\resource\testi-thumb-2.jpg" />
+    <Content Include="images\resource\testi-thumb-3.jpg" />
+    <Content Include="images\resource\thumb-1.jpg" />
+    <Content Include="images\resource\thumb-2.jpg" />
+    <Content Include="images\resource\thumb-3.jpg" />
+    <Content Include="images\shop\image-1.jpg" />
+    <Content Include="images\shop\image-10.jpg" />
+    <Content Include="images\shop\image-2.jpg" />
+    <Content Include="images\shop\image-3.jpg" />
+    <Content Include="images\shop\image-4.jpg" />
+    <Content Include="images\shop\image-5.jpg" />
+    <Content Include="images\shop\image-6.jpg" />
+    <Content Include="images\shop\image-7.jpg" />
+    <Content Include="images\shop\image-8.jpg" />
+    <Content Include="images\shop\image-9.jpg" />
+    <Content Include="images\shop\thumb-1.jpg" />
+    <Content Include="images\shop\thumb-2.jpg" />
+    <Content Include="images\shop\thumb-3.jpg" />
+    <Content Include="images\sponsors\1.png" />
+    <Content Include="images\sponsors\2.png" />
+    <Content Include="images\sponsors\3.png" />
+    <Content Include="images\sponsors\4.png" />
+    <Content Include="images\sponsors\5.png" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\bxslider.js" />
+    <Content Include="js\isotope.js" />
+    <Content Include="js\jquery.appear.js" />
+    <Content Include="js\jquery.bootstrap-touchspin.js" />
+    <Content Include="js\jquery.countdown.js" />
+    <Content Include="js\jquery.fancybox-media.js" />
+    <Content Include="js\jquery.fancybox.pack.js" />
+    <Content Include="js\jquery.js" />
+    <Content Include="js\jquery.mCustomScrollbar.concat.min.js" />
+    <Content Include="js\map-script.js" />
+    <Content Include="js\mixitup.js" />
+    <Content Include="js\moment.min.js" />
+    <Content Include="js\monthly.js" />
+    <Content Include="js\nouislider.js" />
+    <Content Include="js\owl.js" />
+    <Content Include="js\respond.js" />
+    <Content Include="js\revolution.min.js" />
+    <Content Include="js\script.js" />
+    <Content Include="js\validate.js" />
+    <Content Include="js\wow.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Areas\HelpPage\Views\Web.config" />
+    <Content Include="Areas\HelpPage\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\ResourceModel.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\Index.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\TextSample.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\SimpleTypeModelDescription.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\Samples.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\Parameters.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ModelDescriptionLink.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\KeyValuePairModelDescription.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\InvalidSample.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ImageSample.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\HelpPageApiModel.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\EnumTypeModelDescription.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\DictionaryModelDescription.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ComplexTypeModelDescription.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\CollectionModelDescription.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="css\assets\arrows.psd" />
+    <Content Include="css\assets\bullets.psd" />
+    <Content Include="css\assets\small_arrows.psd" />
+    <Content Include="images\270x270\Ley-No-302-sobre-costas-y-honorarios-de-abogados.doc" />
+    <Content Include="images\270x270\MEMORIAL_DE_CASACION.docx" />
+    <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Areas\HelpPage\Views\_ViewStart.cshtml" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Boletos.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\DerechoCivil.cshtml" />
+    <Content Include="Views\Home\DerechoFamilia.cshtml" />
+    <Content Include="Views\Home\DerechoInmobiliario.cshtml" />
+    <Content Include="Views\Home\DerechoMigratorio.cshtml" />
+    <Content Include="Views\Home\DerechoOtro.cshtml" />
+    <Content Include="Views\Home\DerechoPenal.cshtml" />
+    <Content Include="Views\Home\Faq.cshtml" />
+    <Content Include="Views\Home\PracticeArea.cshtml" />
+    <Content Include="Views\Home\Shop.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>51974</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:51974/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

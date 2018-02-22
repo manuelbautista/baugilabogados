@@ -1,0 +1,180 @@
+﻿
+@{
+    ViewBag.Title = "PracticeArea";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!--Page Title-->
+<section class="page-title" style="background-image:url(/images/1920x350/estudiocaso.jpg);">
+    <div class="auto-container">
+        <h1>Areas de Practica</h1>
+    </div>
+</section>
+
+<!--Page Info-->
+<section class="page-info">
+    <div class="auto-container clearfix">
+        <div class="pull-left"><h2>Areas de Practica</h2></div>
+        <div class="pull-right">
+            <ul class="bread-crumb clearfix">
+                <li><a href="">Inicio</a></li>
+                <li>Areas de Practica</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+
+<!--Sidebar Page-->
+<div class="sidebar-page-container">
+    <div class="auto-container">
+        <div class="row clearfix">
+
+            <!--Content Side-->
+            <div class="col-lg-9 col-md-8 col-sm-12 col-xs-12 pull-right">
+                <!--practice Areas Section-->
+                <section class="practice-areas">
+                    <div class="row clearfix">
+
+                        <!--Practice Area Column-->
+                        <article class="practice-column col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                            <div class="inner-box">
+                                <figure class="image-box"><img src="/images/270x170/contrato.jpg" alt=""></figure>
+                                <div class="lower-content">
+                                    <div class="icon-box"><span class="flaticon-people-3"></span></div>
+                                    <h3><a href="@Url.Action("DerechoCivil", "Home")">Derecho Civil</a></h3>
+                                    <div class="text">
+                                        <p>
+                                            Regula las relaciones entre los particulares y el Estado.
+                                            Los Contratos, Constitucion de Empresa, Litigios Civiles, Derecho
+                                            Corporativo, Gestion de Cobros, Demandas en General.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!--Practice Area Column-->
+                        <article class="practice-column col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                            <div class="inner-box">
+                                <figure class="image-box"><img src="/images/270x170/divorcio.jpg" alt=""></figure>
+                                <div class="lower-content">
+                                    <div class="icon-box"><span class="flaticon-people-1"></span></div>
+                                    <h3><a href="@Url.Action("DerechoFamilia", "Home")">Derecho de Familia</a></h3>
+                                    <div class="text">
+                                        <p>
+                                            Regula las relaciones entre parientes. Uniones Matrimoniales
+                                            Pensiones alimenticias, Sucesiones (herencias), Guarda
+                                            y Custodia de Menores, Reconocimiento de paternidad.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+
+                        <!--Practice Area Column-->
+                        <article class="practice-column col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                            <div class="inner-box">
+                                <figure class="image-box"><img src="/images/270x170/manos.jpg" alt=""></figure>
+                                <div class="lower-content">
+                                    <div class="icon-box"><span class="flaticon-law-2"></span></div>
+                                    <h3><a href="@Url.Action("DerechoPenal", "Home")">Derecho Penal</a></h3>
+                                    <div class="text">
+                                        <p>
+                                            Previene y reprime actos lesivos al orden social.
+                                            Litigios Penales, Accidentes de Transinto, Robo de identidad,
+                                            Cheques sin Fondo, Medida de Coercion, Pensiones Alimenticias.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!--Practice Area Column-->
+                        <article class="practice-column col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                            <div class="inner-box">
+                                <figure class="image-box"><img src="/images/270x170/migratorio.jpg" alt=""></figure>
+                                <div class="lower-content">
+                                    <div class="icon-box"><span class="flaticon-briefcase"></span></div>
+                                    <h3><a href="@Url.Action("DerechoMigratorio", "Home")">Derecho Migratorio</a></h3>
+                                    <div class="text">
+                                        <p>
+                                            Conjunto de normas que regula el transito internacional
+                                            de personas. Visa Americana de Paseo B1/B2, Renovacion de Visa B1/B2,
+                                            Naturalizaciones en RD, Rastreo de Casos, Autorizacion
+                                            viaje a Menores.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!--Practice Area Column-->
+                        <article class="practice-column col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                            <div class="inner-box">
+                                <figure class="image-box"><img src="/images/270x170/realestate.jpg" alt=""></figure>
+                                <div class="lower-content">
+                                    <div class="icon-box"><span class="flaticon-home"></span></div>
+                                    <h3><a href="@Url.Action("DerechoInmobiliario", "Home")">Derecho Inmobiliario</a></h3>
+                                    <div class="text">
+                                        <p>
+                                            Regula en nacimiento, modificacion, transmision y extincion de
+                                            derechos de propiedad y gravamenes sobre inmuebles. Ventas,
+                                            Alquiler, Desalojos, Litis sobre Derechos Registrados.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!--Practice Area Column-->
+                        <article class="practice-column col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                            <div class="inner-box">
+                                <figure class="image-box"><img src="/images/270x170/civil.jpg" alt=""></figure>
+                                <div class="lower-content">
+                                    <div class="icon-box"><span class="flaticon-tool-10"></span></div>
+                                    <h3><a href="@Url.Action("DerechoOtro", "Home")">Otros Servicios Legales</a></h3>
+                                    <div class="text">
+                                        <p>
+                                            Tenemos a la disposicion otros servicios como son: Venta de Boletos
+                                            Aereos, Traspaso de Vehiculo de Motor, Asesoria crediticia,
+                                            Representacion en conflictos Laborales, Asesoria legal.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                    </div>
+                </section>
+
+            </div><!--End Content Side-->
+            <!--Sidebar-->
+            <div class="col-lg-3 col-md-4 col-sm-12 col-xs-12 pull-left">
+                <aside class="sidebar">
+
+                    <!--Sidebar Widget / Boxed Nav-->
+                    <div class="widget sidebar-widget boxed-nav">
+                        <nav class="nav-outer">
+                            <ul>
+                                <li class="current"><a href="@Url.Action("PracticeArea", "Home")">Areas de Practica</a></li>
+                                <li><a href="@Url.Action("DerechoCivil", "Home")">Derecho Civil</a></li>
+                                <li><a href="@Url.Action("DerechoFamilia", "Home")">Derecho de Familia</a></li>
+                                <li><a href="@Url.Action("DerechoMigratorio", "Home")">Derecho Migratorio</a></li>
+                                <li><a href="@Url.Action("DerechoPenal", "Home")">Derecho Penal</a></li>
+                                <li><a href="@Url.Action("DerechoInmobiliario", "Home")">Derecho Inmobiliario</a></li>
+                                <li><a href="@Url.Action("DerechoOtro", "Home")">Otros Servicios</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+
+
+                </aside>
+            </div><!--End Sidebar-->
+
+        </div>
+    </div>
+</div>
+
+
